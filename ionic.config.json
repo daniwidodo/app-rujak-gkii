@@ -1,0 +1,7 @@
+{
+  "name": "app-rujak-gkii",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
