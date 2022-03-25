@@ -17,4 +17,19 @@ export class PostDetailsPage implements OnInit {
     this.router.navigate(['homepage']);
   }
 
+  // back button navigate previous page
+  backButton(){
+
+  }
+
+  // check if login
+  authCheck(){
+
+  }
+
+  // post comment
+  comment(){
+    // check if auth true = {local.storage exist} open post-comment modal then refresh page if false redirect to login
+  }
+
 }

@@ -5,9 +5,9 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class WarungsatekamuApiService {
-  warungsatekamuendpoint = '';
+  warungsatekamuendpoint = 'https://www.warungsatekamu.org/wp-json/wp/v2/tags?orderby=count&order=desc';
   constructor( private http: HttpClient) {
-    console.log(this.warungsatekamuendpoint);
+
    }
 
 }
