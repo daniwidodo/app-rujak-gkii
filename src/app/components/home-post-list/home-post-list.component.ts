@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-home-post-list',
@@ -7,8 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomePostListComponent implements OnInit {
 
-  constructor() { }
+  routeId: any;
 
-  ngOnInit() {}
+  constructor( private route: ActivatedRoute) { }
+
+  ngOnInit() {
+    this.routeId = this.route.snapshot.paramMap.get('id');
+    console.log(this.routeId);
+  }
 
 }
