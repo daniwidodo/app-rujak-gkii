@@ -2,8 +2,8 @@
   <div class="home-content">
     <app-home-navigation></app-home-navigation>
 
-  <div>
-    <div *ngFor="let dog of catData">
+  <div class="scroll-menu">
+    <div *ngFor="let dog of catData" >
       <span (click)="navigateByCategoryId(dog.catId)" class="navigation-style">
         {{dog.catName}}
       </span>
