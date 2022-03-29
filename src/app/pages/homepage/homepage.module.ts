@@ -8,6 +8,7 @@ import { HomepagePageRoutingModule } from './homepage-routing.module';
 
 import { HomepagePage } from './homepage.page';
 import { HomeNavigationComponent } from 'src/app/components/home-navigation/home-navigation.component';
+import { HomePostListComponent } from 'src/app/components/home-post-list/home-post-list.component';
 
 
 @NgModule({
@@ -18,6 +19,6 @@ import { HomeNavigationComponent } from 'src/app/components/home-navigation/home
     HomepagePageRoutingModule,
 
   ],
-  declarations: [HomepagePage, HomeNavigationComponent, ]
+  declarations: [HomepagePage, HomeNavigationComponent, HomePostListComponent ]
 })
 export class HomepagePageModule {}

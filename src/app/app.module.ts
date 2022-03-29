@@ -8,9 +8,10 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { HttpClientModule } from '@angular/common/http';
 import { HomePostCat1Component } from './components/home-post-cat1/home-post-cat1.component';
+import { HomePostListComponent } from './components/home-post-list/home-post-list.component';
 
 @NgModule({
-  declarations: [AppComponent, HomePostCat1Component],
+  declarations: [AppComponent, HomePostCat1Component, ],
   entryComponents: [],
   imports: [BrowserModule, IonicModule.forRoot(), AppRoutingModule, HttpClientModule],
   providers: [{ provide: RouteReuseStrategy, useClass: IonicRouteStrategy }],
