@@ -1,10 +1,10 @@
-<p>
-  home-post-list works!
-</p>
-<h1>{{routeId}}</h1>
-<div *ngFor="let data of data" style="border: seagreen solid;" >
-  <div (click)="goToPostDetails(data.postID)">
-    {{data.title}} -  <img [src]="data.image" loading="lazy" />
+<p>home-post-list works!</p>
+<h1>{{ routeId }}</h1>
+<div *ngFor="let data of data" style="display: flex; flex-direction: row;">
+  <div
+    (click)="goToPostDetails(data.postID)"
+    style="border: seagreen solid; width: 160px; "
+  >
+    {{ data.title }} - <img [src]="data.image" loading="lazy" />
   </div>
-  
 </div>

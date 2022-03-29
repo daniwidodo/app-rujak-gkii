@@ -1,7 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
-import { map } from 'rxjs/operators';
+import { map, shareReplay } from 'rxjs/operators';
 
 @Injectable({
   providedIn: 'root',
@@ -26,7 +26,7 @@ export class WarungsatekamuApiService {
             console.log(catId, catName);
             return { catId, catName };
           })
-        )
+        ),shareReplay(1)
       );
   }
 
@@ -42,12 +42,12 @@ export class WarungsatekamuApiService {
             // _embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url
             const title = a.title.rendered;
             // eslint-disable-next-line no-underscore-dangle
-            const image = a._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
+            const image = a._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
             const postID = a.id;
             console.log(a);
             return { title, image, postID };
           })
-        )
+        ),shareReplay(1)
       );
   }
 }
