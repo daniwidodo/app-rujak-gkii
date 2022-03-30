@@ -13,6 +13,8 @@ export class HomePostListComponent implements OnInit {
   image: any;
   data: any;
   postID: any;
+
+
   constructor(
     private route: ActivatedRoute,
     private router: Router,
@@ -33,6 +35,8 @@ export class HomePostListComponent implements OnInit {
         console.log(a);
       }
     );
+
+    // console.log(this.fakeData);
   }
 
   goToPostDetails(id){
