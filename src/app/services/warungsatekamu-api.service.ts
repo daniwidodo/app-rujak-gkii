@@ -42,7 +42,7 @@ export class WarungsatekamuApiService {
             // _embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url
             const title = a.title.rendered;
             // eslint-disable-next-line no-underscore-dangle
-            const image = a._embedded['wp:featuredmedia'][0].media_details.sizes.thumbnail.source_url;
+            const image = a._embedded['wp:featuredmedia'][0].media_details.sizes.medium.source_url;
             const postID = a.id;
             console.log(a);
             return { title, image, postID };

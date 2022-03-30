@@ -1,10 +1,13 @@
-<p>
-  home-post-list works!
-</p>
-<h1>{{routeId}}</h1>
-<div *ngFor="let data of data" style="border: seagreen solid;" >
-  <div (click)="goToPostDetails(data.postID)">
-    {{data.title}} -  <img [src]="data.image" loading="lazy" />
+<h3>Artikel Terbaru</h3>
+
+<div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100% ;gap: 10px 20px;">
+  <div
+    *ngFor="let data of data"
+    style="display: flex; flex-direction: column; width: 150px; max-height: 180px; "
+  >
+    <div (click)="goToPostDetails(data.postID)">
+      <img [src]="data.image" loading="lazy" />
+      <span>{{ data.title }}</span>
+    </div>
   </div>
-  
 </div>
