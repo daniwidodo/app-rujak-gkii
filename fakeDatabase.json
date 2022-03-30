@@ -1,0 +1,81 @@
+{
+    "fakeMenus" : [
+        {
+            "catId": 88,
+            "catName": "Doa"
+        },
+        {
+            "catId": 19,
+            "catName": "Kasih Allah"
+        },
+        {
+            "catId": 91,
+            "catName": "Keselamatan"
+        },
+        {
+            "catId": 38,
+            "catName": "Kristus"
+        },
+        {
+            "catId": 521,
+            "catName": "Allah"
+        },
+        {
+            "catId": 87,
+            "catName": "Alkitab"
+        }
+    ],
+    "fakeData" : [
+        {
+            "title": "Sikap Hati dalam Bergumul",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2022/02/2022-02-23-bergumul-300x180.jpg",
+            "postID": 37595
+        },
+        {
+            "title": "Ketika Tuhan Memulihkan Keluargaku Lewat Covid-19",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/09/2021-09-13-covid-300x180.jpg",
+            "postID": 35804
+        },
+        {
+            "title": "Doa: Sebuah Usaha Bergantung Pada Kebaikan Hati Bapa",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-29-doa-sebuah-usaha-300x180.jpg",
+            "postID": 35535
+        },
+        {
+            "title": "4 Langkah untuk Mendoakan Temanmu",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-21-empat-langkah-berdoa-300x180.jpg",
+            "postID": 35512
+        },
+        {
+            "title": "Jurnal Doa",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-19-jurnal-doa-300x180.jpg",
+            "postID": 35507
+        },
+        {
+            "title": "2 Hal yang Perlu Kita Pahami Saat Berdoa",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-16-dua-hal-berdoa-300x180.jpg",
+            "postID": 35497
+        },
+        {
+            "title": "Tentang Doa yang Tidak Terkabul: Apakah Kita Kurang Sungguh Berdoa?",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-14-tentang-doa-yang-tidak-terkabul-300x180.jpg",
+            "postID": 35482
+        },
+        {
+            "title": "Cerpen: Ngobrol Dengan Tuhan Itu Asyik",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-07-ngobrol-dengan-Tuhan-300x180.jpg",
+            "postID": 35458
+        },
+        {
+            "title": "3 Sifat Anak Kecil yang Perlu Kita Contoh",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/07/2021-07-02-sifat-anak-kecil-300x180.jpg",
+            "postID": 35441
+        },
+        {
+            "title": "Minggu Palma: Menantikan Pemulihan Dunia dalam Doa",
+            "image": "https://www.warungsatekamu.org/wp-content/uploads/2021/03/2021-03-28-minggu-palma-300x180.jpg",
+            "postID": 34590
+        }
+    ]
+
+}
