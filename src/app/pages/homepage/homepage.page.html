@@ -1,21 +1,43 @@
-<ion-content >
+<ion-content>
   <div class="home-content">
-    <app-home-navigation></app-home-navigation>
 
-  <div class="scroll-menu">
-    <div *ngFor="let dog of catData" >
-      <span (click)="navigateByCategoryId(dog.catId)" class="navigation-style">
-        {{dog.catName}}
-      </span>
+    <app-home-navigation ></app-home-navigation>
+
+    <div style="margin: 20px;"></div>
+
+    <div
+      class="scroll-menu"
+      style="
+        overflow-x: scroll;
+        overflow-y: hidden;
+        white-space: nowrap;
+        height: 50px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+      "
+    >
+      <div
+        *ngFor="let dog of catData"
+        style="display: inline-block; margin-right: 8px; padding: 5px;"
+      >
+        <span
+          (click)="navigateByCategoryId(dog.catId)"
+          style="border: solid gray 1px; border-radius: 5px; padding: 8px"
+        >
+          {{dog.catName}}
+        </span>
+      </div>
     </div>
-  </div>
-  <router-outlet></router-outlet>
 
-  <div class="send-pray-button">
+    <div style="margin: 20px;"></div>
+
+    <router-outlet></router-outlet>
+
+    <!-- <div class="send-pray-button">
     <span>kami akan mendoakan kamu!</span>
+  </div> -->
   </div>
-
-  </div>
-  
 </ion-content>
 <!--  -->

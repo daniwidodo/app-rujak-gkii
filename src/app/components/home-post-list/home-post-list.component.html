@@ -1,5 +1,5 @@
 
-<h3>Artikel Terbaru</h3>
+<h3 style="font-weight: 800;">Artikel Terbaru</h3>
 
 <div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100% ;gap: 10px 20px;">
   <div
@@ -7,8 +7,8 @@
     style="display: flex; flex-direction: column; width: 150px; max-height: 180px; "
   >
     <div (click)="goToPostDetails(data.postID)">
-      <img [src]="data.image" loading="lazy" />
-      <span>{{ data.title }}</span>
+      <img [src]="data.image" loading="lazy" style="border-radius: 5px; " />
+      <span style="font-weight: 600;">{{ data.title }}</span>
     </div>
 
   </div>
