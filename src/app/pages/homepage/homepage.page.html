@@ -1,37 +1,27 @@
 <ion-content>
   <div class="home-content">
+    <app-home-navigation></app-home-navigation>
 
-    <app-home-navigation ></app-home-navigation>
-
-    <div style="margin: 10px;"></div>
-
-    <div
-      class="scroll-menu"
-      style="
-        overflow-x: scroll;
-        overflow-y: hidden;
-        white-space: nowrap;
-        height: 50px;
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        
-      "
-    >
-      <div
-        *ngFor="let dog of catData"
-        style="display: inline-block; margin-right: 8px; padding: 5px;"
-      >
+    <div  style="
+    overflow-x: scroll;
+    overflow-y: hidden;
+    white-space: nowrap;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  ">
+      <nav *ngFor="let dog of catData" style="display: inline-block; margin-right: 8px; padding: 5px">
         <span
-          (click)="navigateByCategoryId(dog.catId)"
-          style="border: solid gray 1px; border-radius: 8px; padding: 8px;"
-        >
-          {{dog.catName}}
+          routerLink="/homepage/halamanList/{{dog.catId}}"
+          routerLinkActive="active"
+          style="border: solid gray 1px; border-radius: 8px; padding: 8px"
+          >{{dog.catName}} - {{dog.catId}}
         </span>
-      </div>
+      </nav>
     </div>
 
-    <div style="margin: 20px;"></div>
+     <div style="margin: 20px"></div>
 
     <router-outlet></router-outlet>
 

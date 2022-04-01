@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 import { WarungsatekamuApiService } from 'src/app/services/warungsatekamu-api.service';
+import { map } from 'rxjs/operators';
 
 @Component({
   selector: 'app-homepage',
@@ -17,7 +18,7 @@ export class HomepagePage implements OnInit {
   catData: any;
   initId: any;
 
-  constructor(private router: Router, private sateApi: WarungsatekamuApiService ) {
+  constructor(private router: Router, private sateApi: WarungsatekamuApiService, private activated: ActivatedRoute ) {
 
    }
 

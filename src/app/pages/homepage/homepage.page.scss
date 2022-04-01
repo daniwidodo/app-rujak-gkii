@@ -18,4 +18,11 @@
 .scroll-menu{
     overflow: auto;
     white-space: nowrap;
+
+    
+}
+
+nav span.active{
+    color: white;
+    background-color: black;
 }
