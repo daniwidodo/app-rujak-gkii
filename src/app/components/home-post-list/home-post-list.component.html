@@ -1,15 +1,36 @@
+<div id="posts" class="post-lists">
+  <h3 style="font-weight: 800">Artikel Terbaru</h3>
 
-<h3 style="font-weight: 800;">Artikel Terbaru</h3>
-
-<div style="display: flex; flex-direction: row; flex-wrap: wrap; width: 100% ;gap: 10px 20px;">
   <div
-    *ngFor="let data of data"
-    style="display: flex; flex-direction: column; width: 150px; max-height: 180px; "
+    id="first"
+    style="
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+      width: 100%;
+      gap: 10px 20px;
+    "
   >
-    <div (click)="goToPostDetails(data.postID)">
-      <img [src]="data.image" loading="lazy" style="border-radius: 5px; " />
-      <span style="font-weight: 600;">{{ data.title }}</span>
-    </div>
+    <div
+      *ngFor="let data of data"
+      style="
+        display: flex;
+        flex-direction: column;
+        width: 150px;
+        max-height: 180px;
+      "
+    >
+      <div id="second" (click)="goToPostDetails(data.postID)" ro>
+        <!-- <img [src]="data.image"  style="border-radius: 5px; " /> -->
 
+        <img
+          style="border-radius: 5px"
+          [src]="data.image"
+          onError="this.src='https://picsum.photos/200'"
+        />
+
+        <p style="font-weight: 600">{{ data.title }}</p>
+      </div>
+    </div>
   </div>
 </div>

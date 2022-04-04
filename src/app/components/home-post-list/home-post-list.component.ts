@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { WarungsatekamuApiService } from 'src/app/services/warungsatekamu-api.service';
+import { LoadingController } from '@ionic/angular';
 
 @Component({
   selector: 'app-home-post-list',
@@ -18,7 +19,8 @@ export class HomePostListComponent implements OnInit {
   constructor(
     private route: ActivatedRoute,
     private router: Router,
-    private sateApi: WarungsatekamuApiService
+    private sateApi: WarungsatekamuApiService,
+    public loadingController: LoadingController
   ) {
 
   }
@@ -26,17 +28,34 @@ export class HomePostListComponent implements OnInit {
   ngOnInit() {
     this.routeId = this.route.snapshot.paramMap.get('id');
     console.log(this.routeId);
+
+    this.getData();
+    // console.log(this.fakeData);
+  }
+
+  getData() {
+
     this.sateApi.getCatDataByID(this.routeId).subscribe(
-      a => {
+      async a => {
+        // loading on //
+        const loading = await this.loadingController.create({
+          message: 'Mengambil data dari server',
+          duration: 2000
+        });
+        await loading.present();
+        //
         this.data = a;
         this.title = a.title;
         this.image = a.image;
         this.postID = a.postID;
         console.log(a);
+        // loading off //
+        const { role, data } = await loading.onDidDismiss();
+
+        console.log('Loading dismissed!');
       }
     );
 
-    // console.log(this.fakeData);
   }
 
   goToPostDetails(id){

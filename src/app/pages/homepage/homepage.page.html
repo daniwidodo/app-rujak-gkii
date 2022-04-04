@@ -1,33 +1,65 @@
+
+
 <ion-content>
-  <div class="home-content">
-    <app-home-navigation></app-home-navigation>
 
-    <div  style="
-    overflow-x: scroll;
-    overflow-y: hidden;
-    white-space: nowrap;
-    height: 50px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-  ">
-      <nav *ngFor="let dog of catData" style="display: inline-block; margin-right: 8px; padding: 5px">
-        <span
-          routerLink="/homepage/halamanList/{{dog.catId}}"
-          routerLinkActive="active"
-          style="border: solid gray 1px; border-radius: 8px; padding: 8px"
-          >{{dog.catName}} - {{dog.catId}}
-        </span>
-      </nav>
+  <!-- HEADER -->
+
+  <div
+    id="header"
+    style="
+      
+      background: rgb(34, 193, 195);
+      background: linear-gradient(
+        0deg,
+        rgba(34, 193, 195, 1) 0%,
+        rgba(253, 187, 45, 1) 100%
+      );
+    "
+  >
+    <div class="home-content">
+      <app-home-navigation></app-home-navigation>
+
+      <h6 style="text-align: center">Hari ini saya ingin belajar tentang</h6>
+
+      <div
+        id="navigasi"
+        style="
+          overflow-x: scroll;
+          overflow-y: hidden;
+          white-space: nowrap;
+          height: 50px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          margin-bottom: 20px;
+        "
+      >
+        <nav
+          *ngFor="let dog of catData"
+          style="
+            display: inline-block;
+            margin-right: 8px;
+            padding: 5px;
+            margin-bottom: 20px;
+            margin-top: 20px;
+          "
+        >
+          <span
+            routerLink="/homepage/halamanList/{{dog.catId}}"
+            routerLinkActive="active"
+            style="border-radius: 8px; padding: 8px; color: white"
+            >{{dog.catName}}
+          </span>
+        </nav>
+      </div>
     </div>
+  </div>
 
-     <div style="margin: 20px"></div>
+  <!-- BODY -->
+  <router-outlet></router-outlet>
 
-    <router-outlet></router-outlet>
-
-    <!-- <div class="send-pray-button">
+  <!-- <div class="send-pray-button">
     <span>kami akan mendoakan kamu!</span>
   </div> -->
-  </div>
 </ion-content>
 <!--  -->
