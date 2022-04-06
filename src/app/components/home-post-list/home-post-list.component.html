@@ -20,7 +20,7 @@
         max-height: 180px;
       "
     >
-      <div id="second" (click)="goToPostDetails(data.postID)" ro>
+      <div id="second" (click)="goToPostDetails(data.postID)" routerLink="/post-details/{{data.postID}}">
         <!-- <img [src]="data.image"  style="border-radius: 5px; " /> -->
 
         <img
