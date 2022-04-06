@@ -53,6 +53,15 @@ export class WarungsatekamuApiService {
 
   getPostDetails( postId ){
     return this.http.get( this.warungsatekamuendpoint + 'posts/' + postId + '?_embed')
+    // tambah map biar jsonnya bersih
     .pipe();
+  }
+
+  // pencarian
+  searchQuery( query ){
+    return this.http.get( this.warungsatekamuendpoint )
+    .pipe(
+
+    );
   }
 }
