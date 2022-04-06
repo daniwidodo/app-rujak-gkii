@@ -50,4 +50,9 @@ export class WarungsatekamuApiService {
         ),shareReplay(1)
       );
   }
+
+  getPostDetails( postId ){
+    return this.http.get( this.warungsatekamuendpoint + 'posts/' + postId + '?_embed')
+    .pipe();
+  }
 }

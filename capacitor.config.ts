@@ -2,7 +2,7 @@ import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
   appId: 'io.ionic.starter',
-  appName: 'app-rujak-gkii',
+  appName: 'rujak-ruang-remaja-kristen',
   webDir: 'www',
   bundledWebRuntime: false
 };

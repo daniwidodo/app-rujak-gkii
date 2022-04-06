@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
+import { WarungsatekamuApiService } from '../../services/warungsatekamu-api.service';
 
 @Component({
   selector: 'app-post-details',
@@ -8,9 +9,19 @@ import { Router } from '@angular/router';
 })
 export class PostDetailsPage implements OnInit {
 
-  constructor(private router: Router) { }
+  postId: any;
+  data: any;
+  constructor(private router: Router, private activated: ActivatedRoute, private sateApi: WarungsatekamuApiService) { }
 
   ngOnInit() {
+    this.postId = this.activated.snapshot.paramMap.get('id');
+    console.log(this.postId);
+    this.sateApi.getPostDetails(this.postId).subscribe(
+      a => {
+         this.data = a;
+        console.log(this.data);
+      }
+    );
   }
 
   goToHomepage(){
