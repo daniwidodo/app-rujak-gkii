@@ -3,13 +3,13 @@
 
     <div >
       <div style="position: absolute;">
-        <ion-button fill="clear" shape="round"> 
+        <ion-button fill="clear" shape="round" routerLink="/homepage/halamanList/88"> 
           <ion-icon size="medium" slot="icon-only" name="arrow-back-outline" style=" font-weight: 600; font-size: 24px;"></ion-icon>
         </ion-button>
       </div>
 
       
-      <img [src]="postDetailsImage" onerror="" style="width: 100%; border-radius: 10px;" />
+      <img [src]="postDetailsImage" onError="this.src='https://picsum.photos/200'" style="width: 100%; border-radius: 10px;" />
     </div>
     <!-- Judul -->
     <h1>{{postDetailsTitle}}</h1>

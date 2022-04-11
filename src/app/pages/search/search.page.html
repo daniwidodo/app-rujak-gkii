@@ -1,15 +1,20 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
-    </ion-buttons>
-    <ion-title>Pencarian</ion-title>
-  </ion-toolbar>
-</ion-header>
-
 <ion-content>
+  <ion-button fill="clear" shape="round" routerLink="/homepage/halamanList/88"> 
+    <ion-icon size="medium" slot="icon-only" name="arrow-back-outline" style=" font-weight: 600; font-size: 24px;"></ion-icon>
+  </ion-button>
+  <div style="display: flex; padding: 20px; flex-direction: column">
+    <div >
+      <!-- Searchbar with cancel button always shown -->
+      <ion-searchbar style="padding: 0;" ></ion-searchbar>
+    </div>
 
-  <input type="text">
+    <h1>Hasil pencarian :</h1>
 
+    <!-- if result == 0 display no result -->
+    <div style="display: flex;">
+      <p style="color: gray;">Pencarian tidak ditemukan</p>
+    </div>
 
+    <!-- result page -->
+  </div>
 </ion-content>
