@@ -35,7 +35,7 @@ export class WarungsatekamuApiService {
       .get(this.warungsatekamuendpoint + this.getCatDataEndpoint + activatedId + this.embed)
       .pipe(
         map((actions: any) =>
-          actions.map((a) => {
+          actions.map((a: any) => {
             // const catId = a.id;
             // const catName = a.name;
             // _embedded["wp:featuredmedia"][0].media_details.sizes.thumbnail.source_url
@@ -54,7 +54,9 @@ export class WarungsatekamuApiService {
   getPostDetails( postId ){
     return this.http.get( this.warungsatekamuendpoint + 'posts/' + postId + '?_embed')
     // tambah map biar jsonnya bersih
-    .pipe();
+    .pipe(
+
+    );
   }
 
   // pencarian
