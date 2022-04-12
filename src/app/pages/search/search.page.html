@@ -5,7 +5,7 @@
   <div style="display: flex; padding: 20px; flex-direction: column">
     <div >
       <!-- Searchbar with cancel button always shown -->
-      <ion-searchbar style="padding: 0;" ></ion-searchbar>
+      <ion-searchbar style="padding: 0;" placeholder="Pencarian" (ionChange)='getSearchQuery($event)' ></ion-searchbar>
     </div>
 
     <h1>Hasil pencarian :</h1>
@@ -16,5 +16,8 @@
     </div>
 
     <!-- result page -->
+    <div>
+      {{}}
+    </div>
   </div>
 </ion-content>
