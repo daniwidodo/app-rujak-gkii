@@ -61,7 +61,7 @@ export class WarungsatekamuApiService {
 
   // pencarian
   searchQuery( query ){
-    return this.http.get( this.warungsatekamuendpoint )
+    return this.http.get( this.warungsatekamuendpoint + 'search' + '?subtype=post&_embed' + '&'  + 'search=' + query)
     .pipe(
 
     );
