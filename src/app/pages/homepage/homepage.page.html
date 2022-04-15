@@ -1,13 +1,17 @@
 <ion-content>
   <!-- HEADER -->
 
-  <div
-    id="header"
-   
-  >
-    <div class="home-content">
-      <app-home-navigation></app-home-navigation>
 
+  
+
+  
+    <div  style="z-index: 2; position: relative;">
+      <!-- <app-home-navigation></app-home-navigation> -->
+      <div style="background: linear-gradient(17deg, rgba(36,0,29,1) 0%, rgba(121,9,102,1) 35%, rgba(255,0,245,1) 100%);
+      padding: 10px; color: white;" >
+
+        <h4 style="font-weight: 800">RUJAK</h4>
+      <div style="height: 10px;"></div>
       <h6 style="text-align: center">Hari ini saya ingin belajar tentang</h6>
 
       <div
@@ -21,6 +25,7 @@
           flex-direction: row;
           align-items: center;
           margin-bottom: 20px;
+          color: white;
         "
       >
         <nav
@@ -31,18 +36,22 @@
             padding: 5px;
             margin-bottom: 20px;
             margin-top: 20px;
+            color: white;
           "
         >
           <span
             routerLink="/homepage/halamanList/{{dog.catId}}"
             routerLinkActive="active"
-            style="border-radius: 8px; padding: 8px; color: black; font-weight: 600;"
+            style="border-radius: 8px; padding: 8px; color: white; font-weight: 600;"
             >{{dog.catName}}
           </span>
         </nav>
       </div>
+
+      </div>
+      
     </div>
-  </div>
+  
 
   <!-- BODY -->
   <router-outlet></router-outlet>
